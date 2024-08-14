@@ -18,27 +18,25 @@ plt.ylabel('Sepal Width (cm)')
 plt.title('Iris Dataset')
 plt.show()
 
-# Calculate the mean and standard deviation of each feature
+# Calculate the mean and standard deviation 
 means = df.mean()
 stds = df.std()
 
 print(means)
 print(stds)
 
-# Calculate the correlation matrix
 corr_matrix = df.corr()
 print(corr_matrix)
 
-# Calculate the covariance matrix
 cov_matrix = df.cov()
 print(cov_matrix)
 
 
-# Filter rows where sepal length is greater than 5
+# Filter rows where sepal length >5
 filtered_df = df[df['sepal length (cm)'] > 5]
 
 print(filtered_df.head())
 
-# Group by target variable and calculate mean of each feature
+# Group by target variable, calculate mean of each feature
 grouped_df = df.groupby('target').mean()
 print(grouped_df)
